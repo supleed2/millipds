@@ -1,0 +1,9 @@
+services:
+  millipds:
+    container_name: millipds
+    build: .
+    restart: unless-stopped
+    ports:
+      - "8123:8123"
+    volumes:
+      - "${MILLIPDS_DATA}:/opt/millipds/data"
